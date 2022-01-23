@@ -1,0 +1,66 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.parent {
+  padding: 5px;
+  background-color: #00aaff;
+}
+
+.child {
+  padding: 5px;
+}
+
+.child-one {
+  background-color: rgb(116, 255, 116);
+}
+
+.child-two {
+  background-color: rgb(255, 116, 174);
+}
+
+.child-three {
+  background-color: rgb(116, 255, 255);
+}
+
+/* css position, by default is static position, which follows HTML order
+*/
+
+.parent {
+  position: relative;
+  height: 200vh;
+  /* which will be made all child relative to its parent */
+}
+
+.child-one {
+  /* position: relative; */
+  position: sticky;
+  left: 10px;
+  top: 10px;
+  /* position relatives will share similar feature as static, but we can changes top, left, right & bottom of this element */
+
+  /* actually position relative are rarely using top, left, right and bottom for styling, coz it confusing to style and already out of the document (HTML) flow */
+}
+
+.child-two {
+  position: absolute;
+  /* position: sticky; */
+  /* absolute means, its removes from document flow and position itself into specific location as we designed to be   */
+  top: 10px;
+}
+
+.child-three {
+  /* fixed position very similar to absolute position, and will ignore any position on its parent. ehich only fixed to entire html element.
+  
+  fixed position will stay in the same place when we scroll.
+
+  */
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* sticky position is a combination of relative and fixed position 
+It will be as an absolute position inside the parent element, then as we scroll the position will be fixed.
+*/
